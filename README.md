@@ -1,16 +1,4 @@
-# FSND: Capstone Project
-
-## Content
-
-1. [Motivation](#motivation)
-2. [Start Project locally](#start-locally)
-3. [API Documentation](#api)
-4. [Authentification](#authentification)
-
-<a name="motivation"></a>
-## Motivations & Covered Topics
-
-This is the last project of the `Udacity-Full-Stack-Nanodegree` Course.
+This is an api for a casting-agency.
 It covers following technical topics in 1 app:
 
 1. Database modeling with `postgres` & `sqlalchemy` (see `models.py`)
@@ -141,7 +129,7 @@ Each ressource documentation is clearly structured:
 Query paginated actors.
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page1
+$ curl -X GET localhost/actors?page1
 ```
 - Fetches a list of dictionaries of examples in which the keys are the ids with all available fields
 - Request Arguments: 
@@ -174,7 +162,7 @@ $ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page1
 If you try fetch a page which does not have any actors, you will encounter an error which looks like this:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page123124
+$ curl -X GET localhost/actors?page123124
 ```
 
 will return
@@ -193,7 +181,7 @@ will return
 Insert new actor into database.
 
 ```bash
-$ curl -X POST https://artist-capstone-fsnd-matthew.herokuapp.com/actors
+$ curl -X POST localhost/actors
 ```
 
 - Request Arguments: **None**
@@ -219,7 +207,7 @@ If you try to create a new actor without a requiered field like `name`,
 it will throw a `422` error:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page123124
+$ curl -X GET localhost/actors?page123124
 ```
 
 will return
@@ -238,7 +226,7 @@ will return
 Edit an existing Actor
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
+$ curl -X PATCH localhost/actors/1
 ```
 
 - Request Arguments: **integer** `id from actor you want to update`
@@ -275,7 +263,7 @@ $ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
 If you try to update an actor with an invalid id it will throw an `404`error:
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/125
+$ curl -X PATCH localhost/actors/125
 ```
 
 will return
