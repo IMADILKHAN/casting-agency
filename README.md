@@ -1,5 +1,5 @@
 This is an api for a casting-agency.
-It covers following technical topics in 1 app:
+It covers following technical topics in 1 app:-
 
 1. Database modeling with `postgres` & `sqlalchemy` (see `models.py`)
 2. API to performance CRUD Operations on database with `Flask` (see `app.py`)
